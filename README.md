@@ -18,6 +18,7 @@ A complete guide to understanding, building, and applying Recurrent Neural Netwo
 10. [RNNs vs Transformers](#rnns-vs-transformers)
 11. [Minimal Code Example](#minimal-code-example)
 12. [Resources](#resources)
+13. [Repo Structure & Hands-on Notebooks](#repo-structure--hands-on-notebooks)
 
 ---
 
@@ -263,8 +264,68 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 - WMT (machine translation)
 - CoNLL-2003 (named entity recognition)
 
+> 🔎 Looking for a longer, categorized list (videos, extra courses, extra datasets)? See [`resources.md`](./resources.md).
+
 ---
 
 ## Summary
 
 RNNs brought sequential memory to neural networks, enabling early breakthroughs in NLP such as machine translation and text generation. While Transformers have since become the dominant architecture for large-scale NLP, understanding RNNs — and their LSTM/GRU variants — remains essential for grasping the evolution of sequence modeling and for building lightweight, efficient models where full-scale Transformers are overkill.
+
+---
+
+## Repo Structure & Hands-on Notebooks
+
+This repo also includes deep-dive chapters and runnable notebooks that expand on everything above.
+
+### 📖 Chapters (in `docs/`)
+
+1. [Introduction to NLP and Sequential Data](./docs/01-introduction.md)
+2. [RNN Architecture](./docs/02-rnn-architecture.md)
+3. [LSTM and GRU](./docs/03-lstm-gru.md)
+4. [Sequence-to-Sequence Models & Attention](./docs/04-seq2seq-attention.md)
+5. [RNNs vs Transformers](./docs/05-rnn-vs-transformers.md)
+
+### 💻 Notebooks (in `notebooks/`)
+
+| Notebook | What it covers |
+|---|---|
+| [`01_simple_rnn_pytorch.ipynb`](./notebooks/01_simple_rnn_pytorch.ipynb) | A vanilla RNN built from scratch in PyTorch, trained to generate text character-by-character |
+| [`02_lstm_sentiment_classifier.ipynb`](./notebooks/02_lstm_sentiment_classifier.ipynb) | An LSTM-based sentiment classifier trained on the IMDB dataset (Keras/TensorFlow) |
+| [`03_seq2seq_translation.ipynb`](./notebooks/03_seq2seq_translation.ipynb) | An encoder-decoder model with attention, trained on a toy sequence-reversal task (PyTorch) |
+
+### 🚀 Getting Started
+
+```bash
+git clone https://github.com/HADIL19/Natural-Language-Processing-With-RNNs.git
+cd Natural-Language-Processing-With-RNNs
+pip install -r requirements.txt
+jupyter notebook
+```
+
+### 🗂️ Full Folder Layout
+
+```
+├── README.md                              ← this file
+├── LICENSE
+├── requirements.txt
+├── resources.md
+├── docs/
+│   ├── 01-introduction.md
+│   ├── 02-rnn-architecture.md
+│   ├── 03-lstm-gru.md
+│   ├── 04-seq2seq-attention.md
+│   └── 05-rnn-vs-transformers.md
+└── notebooks/
+    ├── 01_simple_rnn_pytorch.ipynb
+    ├── 02_lstm_sentiment_classifier.ipynb
+    └── 03_seq2seq_translation.ipynb
+```
+
+### 🤝 Contributing
+
+This is an educational, evolving resource. Contributions are welcome — feel free to open an issue or pull request if you'd like to fix an error, clarify an explanation, add another notebook, or expand the resources list.
+
+### 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
